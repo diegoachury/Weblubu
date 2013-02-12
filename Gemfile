@@ -9,6 +9,7 @@ gem 'pg'
 gem 'less-rails' 
 gem 'twitter-bootstrap-rails',:git=>'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem"therubyracer"
+gem 'active_attr'
 
 
 # Gems used only for assets and not required
