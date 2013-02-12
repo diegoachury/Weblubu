@@ -1,4 +1,7 @@
 Weblubu::Application.routes.draw do
+  resources :contacts
+
+
   get "messages/new"
 
   get "messages/create"
