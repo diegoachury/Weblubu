@@ -1,4 +1,8 @@
 Weblubu::Application.routes.draw do
+  get "messages/new"
+
+  get "messages/create"
+
   get "home/index"
 
   get "home/activity"
