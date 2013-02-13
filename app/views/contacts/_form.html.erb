@@ -12,19 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :placeholder => 'Nombre' %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.text_field :email, :placeholder => 'Correo electronico' %>
   </div>
   <div class="field">
-    <%= f.label :tipo %><br />
-    <%= f.text_field :tipo %>
+    <%= f.select :tipo, "<option>Pagina Web</option><option>Dispositivo Movil</option><option>Aplicacion web</option><option>otros</option>".html_safe %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
     <%= f.text_area :description %>
   </div>
   <div class="actions">
