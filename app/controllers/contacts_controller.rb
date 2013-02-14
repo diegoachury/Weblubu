@@ -10,6 +10,14 @@ class ContactsController < ApplicationController
     end
   end
 
+def vista
+    @contacts = Contact.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @contacts }
+    end
+  end
   # GET /contacts/1
   # GET /contacts/1.json
   def show

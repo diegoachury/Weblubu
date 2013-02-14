@@ -1,12 +1,15 @@
 Weblubu::Application.routes.draw do
-  resources :contacts
+  resources :contacts, only: [:create, :new, :vista]
+  root :to => 'home#index'
+
+    get "contacts/vista"
 
 
   get "messages/new"
 
   get "messages/create"
 
-  get "home/index"
+  #get "home/index"
 
   get "home/activity"
 
@@ -16,7 +19,10 @@ Weblubu::Application.routes.draw do
 
   get "home/contact"
 
- root :to => 'home#index'
+
+
+
+ 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
