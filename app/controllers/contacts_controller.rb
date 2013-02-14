@@ -47,7 +47,7 @@ class ContactsController < ApplicationController
         #linea que permite apenas se realice un envio envie un mail de respuesta rapida
         UserMailer.reply_contact(@contact).deliver
 
-        format.html { redirect_to @contact, notice: 'Contact was successfully created.' }
+        format.html { redirect_to :root, notice: 'Contact was successfully created.' }
         format.json { render json: @contact, status: :created, location: @contact }
       else
         format.html { render action: "new" }
