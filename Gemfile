@@ -10,6 +10,7 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails',:git=>'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem"therubyracer"
 gem 'active_attr'
+gem "devise"
 
 
 # Gems used only for assets and not required
