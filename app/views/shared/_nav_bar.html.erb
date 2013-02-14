@@ -10,8 +10,8 @@
           <a class="brand" href="#"><img src="/img/logo.png" alt="Lubu" width="86" height="46"></a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="#">Inicio</a></li>
-              <li><a href="#contact">Contacto</a></li>
+              <li><%= link_to 'Inicio', root_url %></li>
+              <li><%= link_to 'Contacto', :controller => "contacts", :action => "new" %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
