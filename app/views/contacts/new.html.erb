@@ -1,6 +1,13 @@
-<h1>New contact</h1>
-
-<%= form_for(@contact) do |f| %>
+<div class="container">
+	<div class="row-fluid">
+		<div class="span12">
+			<br>
+		<div class="row-fluid">
+      		<div class="span2">
+      			<img src="/img/torre-grande.png">
+      		</div>
+      		<div class="span7">
+      			<%= form_for(@contact) do |f| %>
   <% if @contact.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
@@ -12,23 +19,78 @@
       </ul>
     </div>
   <% end %>
+<div class="form-horizontal">
+	<div class="control-group">
+    
+    <div class="controls">
+     <h3>Enviar Mensaje</h3>
+    </div>
+  </div>
+	
+  <div class="control-group">
+    <label class="control-label">Nombre</label>
+    <div class="controls">
+      <%= f.text_field :name, :placeholder =>'Nombre', :class => 'span8' %>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.text_field :name, :placeholder => 'Nombre' %>
+  <div class="control-group">
+    <label class="control-label">Correo</label>
+    <div class="controls">
+      <%= f.text_field :email, :class => 'span8', :placeholder =>'Correo Electronico' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.text_field :email, :placeholder => 'Correo electronico' %>
+
+ <div class="control-group">
+    <label class="control-label">Tipo</label>
+    <div class="controls">
+      <%= f.select :tipo, "<option>Pagina Web</option><option>Dispositivo Movil</option><option>Aplicacion web</option><option>otros</option>".html_safe  %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.select :tipo, "<option>Pagina Web</option><option>Dispositivo Movil</option><option>Aplicacion web</option><option>otros</option>".html_safe %>
+
+  <div class="control-group">
+    <label class="control-label">Descripción</label>
+    <div class="controls">
+       <%= f.text_area :description, :size => "20x10", :class => 'span8' %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.text_area :description %>
+
+  <div class="control-group">
+    <div class="controls">
+      <%= f.submit 'Enviar', :class => 'btn btn-large btn-danger'  %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+</div>
 <% end %>
 
 
 <%= link_to 'Back', contacts_path %>
+      		</div>
+      		<div class="span3">
+      			<address>
+      				<strong>Lubu, SAS.</strong><br>
+      				Cra 19B # 58 - 51, Villa Carolina<br>
+      				Huila, Neiva<br>
+      				<abbr title="Phone">tel:</abbr> (8) 8769720<br>
+      				<a href="mailto:info@lubu.com.co">info@lubu.com.co</a>
+      			</address>
+      			<address>
+      				<strong>Twitter</strong><br>
+      				<a href="mailto:#">@lubusas</a>
+      			</address>
+      			<hr>
+      			<strong>Vamos a Empezar</strong><br>
+      			<strong class="muted">Escribenos</strong><br>
+      			<p>Háblenos de su proyecto y le diremos lo que se necesita.</p>
+      			<img src="/img/carita.png">
+      		</div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
