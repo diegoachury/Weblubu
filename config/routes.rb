@@ -3,25 +3,6 @@ Weblubu::Application.routes.draw do
   root :to => 'home#index'
 
     get "contacts/vista"
-
-
-  get "messages/new"
-
-  get "messages/create"
-
-  #get "home/index"
-
-  get "home/activity"
-
-  get "home/work"
-
-  get "home/team"
-
-  get "home/contact"
-
-
-
-
  
 
   # The priority is based upon order of creation:
