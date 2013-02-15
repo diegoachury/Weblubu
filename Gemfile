@@ -11,6 +11,8 @@ gem 'twitter-bootstrap-rails',:git=>'git://github.com/seyhunak/twitter-bootstrap
 gem"therubyracer"
 gem 'active_attr'
 gem "devise"
+gem 'heroku'
+
 
 
 # Gems used only for assets and not required
